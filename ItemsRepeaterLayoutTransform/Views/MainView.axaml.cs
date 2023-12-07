@@ -1,7 +1,5 @@
-﻿using System;
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Metadata;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Media.Transformation;
@@ -10,13 +8,12 @@ namespace ItemsRepeaterLayoutTransform.Views;
 
 public partial class MainView : UserControl
 {
-
     private readonly double _minZoom = 0.15;
     private readonly double _maxZoom = 500.0;
     private readonly double _zoomInDelta = 1.1;
     private readonly double _zoomOutDelta = 0.91;
 
-    private LayoutTransformControl _layoutTransformControl;
+    private LayoutTransformControl? _layoutTransformControl;
 
     public MainView()
     {
